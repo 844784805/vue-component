@@ -1,4 +1,4 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+import EchartBox from './components/echarts/index';
+createApp(App).use(EchartBox).mount('#app')
