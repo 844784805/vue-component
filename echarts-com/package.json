@@ -1,6 +1,6 @@
 {
-  "name": "echarts-com",
-  "version": "1.0.0",
+  "name": "z-echarts",
+  "version": "0.0.1",
   "description": "echart封装组件",
   "main": "index.js",
   "keywords": [
