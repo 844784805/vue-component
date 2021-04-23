@@ -1,0 +1,11 @@
+{
+  "name": "echarts-com",
+  "version": "1.0.0",
+  "description": "echart封装组件",
+  "main": "index.js",
+  "keywords": [
+    "vue"
+  ],
+  "author": "",
+  "license": "ISC"
+}
