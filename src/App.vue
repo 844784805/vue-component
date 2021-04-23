@@ -20,7 +20,7 @@ export default {
         tooltip: {
           // show: true,
           trigger: 'item',
-          position: 'top'
+          position: 'top',
         },
         legend: {
           data: ['销量'],
@@ -36,13 +36,18 @@ export default {
             type: 'bar',
             data: [5, 20, 36, 10, 10, 20],
           },
+          {
+            name: '销量1',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20],
+          },
         ],
       },
       chart: null,
     });
 
     const chartDiv = ref(null);
-    // let index = 0;
+    let index = 0;
     onMounted(() => {
       nextTick(() => {
         state.chart = chartDiv.value.chartId();
@@ -50,14 +55,17 @@ export default {
         state.chart.on('click', 'xAxis', function(params) {
           console.log(params);
         });
-        // setInterval(() => {
-        //   state.chart.dispatchAction({
-        //     type: 'showTip',
-        //     seriesIndex: 0,
-        //     dataIndex: index,
-        //   });
-        //   index++;
-        // }, 2000);
+
+        setInterval(() => {
+          const len = index % 6;
+          // console.log(len);
+          state.chart.dispatchAction({
+            type: 'showTip',
+            seriesIndex: 0,
+            dataIndex: len,
+          });
+          index++;
+        }, 2000);
       });
     });
 
